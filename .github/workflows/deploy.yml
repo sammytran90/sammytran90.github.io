@@ -31,6 +31,6 @@ jobs:
         with:
           project: "sammytran90"
           entrypoint: "./code/main.ts"
-          root: "."
+          root: "./code"
           
           

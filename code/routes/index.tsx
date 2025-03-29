@@ -1,9 +1,11 @@
+
 export default function Home() {
   return (
     <div class="px-4 py-8 mx-auto bg-white">
       <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
         <h1 class="text-4xl font-bold my-6">Anh Trung Tran</h1>
         <p class="text-xl text-gray-600 mb-2">I create software everyday</p>
+        <p class="text-gray-500 mb-4">Hanoi Capital Region</p>
         
         <img
           class="my-6 rounded-full"
@@ -14,16 +16,19 @@ export default function Home() {
         />
         <h2 class="text-2xl font-semibold my-4">Summary</h2>
         <p class="my-4 text-center">
-          A software engineer with enthusiasm to explore innovative ideals, and thrilled to use these for a better quality of life, resource management, and environmental protection
+          I originated from a marketing background and switched to becoming a programmer when I started creating websites. My first project was a web-based Tetris game, which I created and played locally.
+        </p>
+        <p class="my-4 text-center">
+          Afterwards, I continued creating websites for 2 years before deciding to have an MSc in Computing at Sheffield Hallam University (SHU) in the UK. The decision to get back to school resulted in one of the most challenging but valuable periods ever. During this page in my life, I was exposed to a global and dynamic culture, thus forcing myself to be more organized and disciplined. I have learned to man up when Covid-19 came, as I had to manage things by myself in a foreign country.
+        </p>
+        <p class="my-4 text-center">
+          As time flew, I was fortunate enough to get out of university with a distinction and even more to secure myself with IT-related professionals in fast-paced and challenge-welcome environments. These have been precious experiences to me.
         </p>
         
-        <h2 class="text-2xl font-semibold my-4">What I will do when I have time</h2>
+        <h2 class="text-2xl font-semibold my-4">My hobbies</h2>
         <ul class="list-disc list-inside my-4">
-          <li>Watch podcasts</li>
-          <li>Read books</li>
-          <li>Play board games</li>
-          <li>Meditate</li>
-          <li>Casting</li>
+          <li>I play Brilliant everywhere :)</li>
+          <li>I go off-road in my car, and when I rest, I listen to music while coding</li>
         </ul>
         
         <h2 class="text-2xl font-semibold my-4">Experience</h2>
@@ -35,7 +40,7 @@ export default function Home() {
             <ul class="list-disc list-inside mt-2">
               <li>Develop 3D, AR/VR web applications</li>
               <li>Integrate CMS system to manage 3D assets</li>
-              <li>Research and provide solutions for outlying challenges</li>
+              <li>Research and provide solutions for outlying challenges, taking into account different perspectives from various stakeholders</li>
               <li>Manage deployments to different platforms: Azure, Netlify, Github, Amazon Web Services</li>
               <li>Contributions to worldwide brands</li>
             </ul>
@@ -61,7 +66,7 @@ export default function Home() {
             <ul class="list-disc list-inside mt-2">
               <li>Maintain a housing management solution for letting agencies in the UK</li>
               <li>Analyse requirements and develop new features using Angular, .NET Core</li>
-              <li>Collaborate with team members to resolve outstanding issues</li>
+              <li>Collaborate with the team leader and team members to resolve outstanding issues</li>
               <li>Agile team management</li>
             </ul>
           </div>
@@ -73,7 +78,7 @@ export default function Home() {
             <p class="text-gray-500">Hanoi, Vietnam</p>
             <ul class="list-disc list-inside mt-2">
               <li>Develop a financial data analysis platform for the Vietnam market</li>
-              <li>Implement chart components for large datasets with high performance</li>
+              <li>Implement chart components that represent large datasets with high performance</li>
               <li>Collaborate in an Agile managed team</li>
             </ul>
           </div>
@@ -86,7 +91,7 @@ export default function Home() {
             <ul class="list-disc list-inside mt-2">
               <li>Work with a range of projects consecutively</li>
               <li>Collaborate with UI/UX designers to deliver quality products</li>
-              <li>Collaborate with QA team to ensure quality products are delivered to clients</li>
+              <li>Collaborate with QA team to ensure quality products are delivered to the clients</li>
             </ul>
           </div>
           
@@ -97,7 +102,7 @@ export default function Home() {
             <p class="text-gray-500">Hanoi, Vietnam</p>
             <ul class="list-disc list-inside mt-2">
               <li>Develop a mobile prototype that promotes disaster awareness in the community</li>
-              <li>Collaborate with business owner and UI/UX designer to deliver a viable solution</li>
+              <li>Collaborate with business owner and UI/UX designer to deliver a viable solution for the targeted users to provide accessible training to mitigate damages when natural disasters occur</li>
             </ul>
           </div>
         </div>

@@ -10,6 +10,11 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ./code
+
+
     permissions:
       id-token: write # Needed for auth with Deno Deploy
       contents: read # Needed to clone the repository

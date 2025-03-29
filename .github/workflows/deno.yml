@@ -21,6 +21,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: /code
+
     steps:
       - name: Setup repo
         uses: actions/checkout@v4
@@ -39,4 +43,4 @@ jobs:
         run: deno lint
 
       - name: Run tests
-        run: deno test -A /code/**/*.ts /code/**/*.tsx
+        run: deno test

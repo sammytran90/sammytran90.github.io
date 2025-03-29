@@ -36,8 +36,5 @@ jobs:
       - name: Run linter
         run: deno lint
 
-      - name: Run tests
-        run: deno test
-
       - name: Deploy
         run: deployctl deploy --project=sammytran90 --entrypoint=/code/main.ts

@@ -21,6 +21,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ./code
+
     steps:
       - name: Setup repo
         uses: actions/checkout@v4
@@ -37,4 +41,4 @@ jobs:
         run: deno lint
 
       - name: Deploy
-        run: deployctl deploy --project=sammytran90 --entrypoint=/code/main.ts
+        run: deployctl deploy --project=sammytran90 --entrypoint=./main.ts

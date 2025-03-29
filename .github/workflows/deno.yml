@@ -21,26 +21,23 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: /code
-
     steps:
       - name: Setup repo
         uses: actions/checkout@v4
 
       - name: Setup Deno
-        # uses: denoland/setup-deno@v1
-        uses: denoland/setup-deno@61fe2df320078202e33d7d5ad347e7dcfa0e8f31  # v1.1.2
+        uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
 
-      # Uncomment this step to verify the use of 'deno fmt' on each commit.
-      # - name: Verify formatting
-      #   run: deno fmt --check
+      - name: install deployctl
+        run: deno install -A jsr:@deno/deployctl --global
 
       - name: Run linter
         run: deno lint
 
       - name: Run tests
         run: deno test
+
+      - name: Deploy
+        run: deployctl deploy --project=sammytran90 --entrypoint=/code/main.ts

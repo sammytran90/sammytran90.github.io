@@ -32,8 +32,10 @@ export default function Home() {
         </ul>
         
         <h2 class="text-2xl font-semibold my-4">Experience</h2>
+
         <div class="w-full">
-          <div class="mb-6">
+
+          <div class="mb-10">
             <h3 class="text-xl font-semibold">Freelance</h3>
             <p class="text-lg text-gray-700">Senior Software Developer</p>
             <p class="text-gray-600">2021 - Present (4 years)</p>
@@ -45,8 +47,8 @@ export default function Home() {
               <li>Contributions to worldwide brands</li>
             </ul>
           </div>
-          
-          <div class="mb-6">
+          <br></br>
+          <div class="mb-10">
             <h3 class="text-xl font-semibold">DataScope Systems</h3>
             <p class="text-lg text-gray-700">Software Developer</p>
             <p class="text-gray-600">January 2022 - October 2023 (1 year 10 months)</p>
@@ -57,8 +59,8 @@ export default function Home() {
               <li>Collaborating with Helpdesk and Project Owners on issues and maintenance</li>
             </ul>
           </div>
-          
-          <div class="mb-6">
+          <br></br>
+          <div class="mb-10">
             <h3 class="text-xl font-semibold">MIS Active Management Systems Limited</h3>
             <p class="text-lg text-gray-700">Developer</p>
             <p class="text-gray-600">July 2020 - May 2021 (11 months)</p>
@@ -70,8 +72,8 @@ export default function Home() {
               <li>Agile team management</li>
             </ul>
           </div>
-          
-          <div class="mb-6">
+          <br></br>
+          <div class="mb-10">
             <h3 class="text-xl font-semibold">FiinGroup JSC (previously StoxPlus)</h3>
             <p class="text-lg text-gray-700">Software Engineer</p>
             <p class="text-gray-600">January 2019 - August 2019 (8 months)</p>
@@ -82,8 +84,8 @@ export default function Home() {
               <li>Collaborate in an Agile managed team</li>
             </ul>
           </div>
-          
-          <div class="mb-6">
+          <br></br>
+          <div class="mb-10">
             <h3 class="text-xl font-semibold">Miyatsu Viet Nam</h3>
             <p class="text-lg text-gray-700">Software Developer</p>
             <p class="text-gray-600">August 2016 - December 2018 (2 years 5 months)</p>
@@ -94,8 +96,8 @@ export default function Home() {
               <li>Collaborate with QA team to ensure quality products are delivered to the clients</li>
             </ul>
           </div>
-          
-          <div class="mb-6">
+          <br></br>
+          <div class="mb-10">
             <h3 class="text-xl font-semibold">Oxfam</h3>
             <p class="text-lg text-gray-700">Mobile Developer</p>
             <p class="text-gray-600">September 2017 - January 2018 (5 months)</p>
@@ -106,7 +108,6 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        
         <h2 class="text-2xl font-semibold my-4">Education</h2>
         <div class="w-full mb-6">
           <h3 class="text-xl font-semibold">Sheffield Hallam University</h3>

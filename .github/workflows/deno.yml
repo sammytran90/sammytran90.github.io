@@ -43,4 +43,4 @@ jobs:
         with:
           project: "sammytran90"
           entrypoint: "main.ts"
-          root: "./"
+          root: "./code"

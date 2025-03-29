@@ -18,27 +18,28 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./code
-
+    permissions:
+      id-token: write # required
+      contents: read
+      
     steps:
-      - name: Setup repo
+      - name: Clone repository
         uses: actions/checkout@v4
 
-      - name: Setup Deno
+      - name: Install Deno
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
 
-      - name: install deployctl
-        run: deno install -A jsr:@deno/deployctl --global
+      - name: Build step
+        run: "deno task build"
 
-      - name: Run linter
-        run: deno lint
-
-      - name: Deploy
-        run: deployctl deploy --project=sammytran90 --entrypoint=./main.ts
+      - name: Upload to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: "sammytran90"
+          entrypoint: "main.ts"
+          root: "./code"

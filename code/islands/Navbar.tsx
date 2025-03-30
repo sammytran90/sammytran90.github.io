@@ -30,7 +30,6 @@ export function Navbar() {
         {/* Desktop navigation */}
         <div className="hidden md:flex md:items-center md:space-x-6">
           <a href="/" className="text-gray-800 hover:text-blue-600 transition duration-300">Home</a>
-          <a href="/about" className="text-gray-800 hover:text-blue-600 transition duration-300">About me</a>
           <a href="/showcase" className="text-gray-800 hover:text-blue-600 transition duration-300">Showcase</a>
         </div>
       </div>
@@ -40,7 +39,6 @@ export function Navbar() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
             <a href="/" className="text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-            <a href="/about" className="text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About me</a>
             <a href="/showcase" className="text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Showcase</a>
           </div>
         </div>

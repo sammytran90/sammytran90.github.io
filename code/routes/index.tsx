@@ -14,7 +14,7 @@ export default function Home() {
           height="300"
           alt="Profile Picture"
         />
-        <h2 class="text-2xl font-semibold my-4">Summary</h2>
+        <h2 class="text-2xl font-semibold my-4">About me</h2>
         <p class="my-4 text-center">
           I originated from a marketing background and switched to becoming a programmer when I started creating websites. My first project was a web-based Tetris game, which I created and played locally.
         </p>

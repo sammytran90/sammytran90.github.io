@@ -24,7 +24,7 @@ export default function Showcase() {
       <Head>
         <title>Portfolio Showcase</title>
       </Head>
-      <div class="px-4 py-8 mx-auto bg-[#f3f4f6]">
+      <div class="px-4 mt-5 py-8 mx-auto bg-[#f3f4f6]">
         <div class="max-w-screen-md mx-auto">
           <h1 class="text-4xl font-bold mb-8">Portfolio Projects</h1>
           <ul class="list-disc list-inside">

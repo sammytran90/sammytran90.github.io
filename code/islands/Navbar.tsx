@@ -1,7 +1,8 @@
 import { useState } from "preact/hooks";
-export function Navbar() {
+
+export function Navbar(props: { lng: string }) {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <nav className="w-full bg-white shadow-md px-4 py-3">
       <div className="container mx-auto flex justify-between items-center">
@@ -29,8 +30,18 @@ export function Navbar() {
         
         {/* Desktop navigation */}
         <div className="hidden md:flex md:items-center md:space-x-6">
-          <a href="/" className="text-gray-800 hover:text-blue-600 transition duration-300">Home</a>
-          <a href="/showcase" className="text-gray-800 hover:text-blue-600 transition duration-300">Showcase</a>
+ 
+
+          {props.lng === "en" && (
+            <>
+              <a href="/" className="text-gray-800 hover:text-blue-600 transition duration-300">Home</a>
+              <a href="/showcase" className="text-gray-800 hover:text-blue-600 transition duration-300">Showcase</a>
+              <a href="/vi" className="text-gray-800 hover:text-blue-600 transition duration-300">VN</a>
+            </>
+          )}
+          {props.lng === "vi" && (
+            <a href="/en" className="text-gray-800 hover:text-blue-600 transition duration-300">EN</a>
+          )}
         </div>
       </div>
       
@@ -38,8 +49,16 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
-            <a href="/" className="text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-            <a href="/showcase" className="text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Showcase</a>
+            {props.lng === "en" && (
+              <>
+                <a href="/" className="text-gray-800 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="/showcase" className="text-gray-800 hover:text-blue-600 transition duration-300">Showcase</a>
+                <a href="/vi" className="text-gray-800 hover:text-blue-600 transition duration-300">VN</a>
+              </>
+            )}
+            {props.lng === "vi" && (
+              <a href="/en" className="text-gray-800 hover:text-blue-600 transition duration-300">EN</a>
+            )}
           </div>
         </div>
       )}

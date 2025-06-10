@@ -7,7 +7,11 @@ export function Navbar(props: { lng: string }) {
     <nav className="w-full bg-white shadow-md px-4 py-3">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo/Brand */}
-        <div className="font-bold text-xl">Logo</div>
+        <div className="font-bold text-xl">
+          <a href="/">
+            <img src="/logo.png" alt="Happy Horse" className="w-[100px]" />
+          </a>
+        </div>
         
         {/* Mobile menu button */}
         <div className="md:hidden">

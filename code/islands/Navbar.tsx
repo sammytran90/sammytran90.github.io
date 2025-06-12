@@ -38,8 +38,6 @@ export function Navbar(props: { lng: string }) {
 
           {props.lng === "en" && (
             <>
-              <a href="/" className="text-gray-800 hover:text-blue-600 transition duration-300">Home</a>
-              <a href="/showcase" className="text-gray-800 hover:text-blue-600 transition duration-300">Showcase</a>
               <a href="/vi" className="text-gray-800 hover:text-blue-600 transition duration-300">VN</a>
             </>
           )}
@@ -55,8 +53,6 @@ export function Navbar(props: { lng: string }) {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
             {props.lng === "en" && (
               <>
-                <a href="/" className="text-gray-800 hover:text-blue-600 transition duration-300">Home</a>
-                <a href="/showcase" className="text-gray-800 hover:text-blue-600 transition duration-300">Showcase</a>
                 <a href="/vi" className="text-gray-800 hover:text-blue-600 transition duration-300">VN</a>
               </>
             )}

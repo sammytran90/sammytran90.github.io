@@ -2,12 +2,7 @@ import { Head } from "$fresh/runtime.ts";
 
 export default function EnHomePage() {
   return (
-    <>
-      <Head>
-        <title>Home</title>
-      </Head>
-
-      <div class="px-4 py-8 mx-auto bg-white">
+    <div class="px-4 py-8 mx-auto bg-white">
       <div class="max-w-screen-md mt-10 mx-auto flex flex-col items-center justify-center">
         <h1 class="text-4xl font-bold my-6 text-center">
           Hi, glad to see you here!
@@ -24,6 +19,5 @@ export default function EnHomePage() {
         </div>
       </div>
     </div>
-    </>
   )
 }

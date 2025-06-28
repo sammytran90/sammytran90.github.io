@@ -2,8 +2,14 @@ name: Deploy
 on:
   push:
     branches: main
+    paths-ignore:
+      - '.cursor/**'
   pull_request:
     branches: main
+    paths-ignore:
+      - '.cursor/**'
+
+
 
 jobs:
   deploy:

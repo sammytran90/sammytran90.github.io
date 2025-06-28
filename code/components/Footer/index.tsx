@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub, FaYoutube } from "@preact-icons/fa6"
 
 export default function Footer() {
   return (
-    <footer class="bg-[#fce8c5] text-black py-4 fixed grid grid-cols-2 bottom-0 w-full px-4 footer-scroll-animation">
+    <footer class="bg-[#fce8c5] text-black py-2 fixed grid grid-cols-2 bottom-0 w-full px-4"> {/* footer-scroll-animation */}
       <div class="flex">
         <a class="mr-3" href="https://www.upwork.com/freelancers/~01890307fafcc93abc" target="_blank" rel="noopener noreferrer">
           <svg class="w-5 h-5 hover:text-green-500 transition-colors" viewBox="0 0 24 24" fill="currentColor">

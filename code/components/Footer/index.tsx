@@ -1,6 +1,6 @@
 import { FaLinkedin, FaGithub, FaYoutube } from "@preact-icons/fa6"
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer class="bg-[#fce8c5] text-black py-4 fixed grid grid-cols-2 bottom-0 w-full px-4">
       <div class="flex">

@@ -33,14 +33,14 @@ const config: CodegenConfig = {
     },
   ],
   generates: {
-    'src/lib/__generated/graphql.schema.json': {
+    './lib/__generated/graphql.schema.json': {
       plugins: ['introspection'],
     },
-    'src/lib/__generated/graphql.schema.graphql': {
+    './lib/__generated/graphql.schema.graphql': {
       plugins: ['schema-ast'],
     },
-    'src/lib/__generated/sdk.ts': {
-      documents: ['src/lib/graphql/**/*.graphql'],
+    './lib/__generated/sdk.ts': {
+      documents: ['./lib/graphql/**/*.graphql'],
       plugins: ['typescript', 'typescript-operations', 'typescript-graphql-request'],
       config: {
         rawRequest: false,
@@ -55,9 +55,7 @@ const config: CodegenConfig = {
 };
 
 try {
-  await generate({
-    ...config,
-  });
+  await generate(config);
   console.log("✅ GraphQL CodeGen completed successfully!");
 } catch (error) {
   console.error("❌ GraphQL CodeGen failed:", error);

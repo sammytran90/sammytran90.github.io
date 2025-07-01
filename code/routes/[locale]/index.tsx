@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 
-export default function EnHomePage() {
+export default function HomePage() {
   return (
     <div class="px-4 py-8 mx-auto bg-white">
       <div class="max-w-screen-md mt-10 mx-auto flex flex-col items-center justify-center">

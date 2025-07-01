@@ -1,14 +1,15 @@
 import { Navbar } from "../../islands/Navbar.tsx";
-import { PageProps, LayoutConfig } from "$fresh/server.ts";
+import { PageProps } from "$fresh/server.ts";
 import Footer from "../../components/Footer/index.tsx";
 
 export const config: LayoutConfig = {
   skipInheritedLayouts: true, // Skip already inherited layouts
 };
-export default function EnLayout({Component, state}: PageProps) {
+
+export default function Layout({Component, state, params}: PageProps) {
   return (
     <>
-      <Navbar lng="vi" />
+      <Navbar lng={params.locale} />
       <Component />
       <Footer />
     </>

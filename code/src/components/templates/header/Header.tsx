@@ -16,7 +16,7 @@ export const Header = () => {
       <nav>
         <Container className="flex items-center justify-between">
           <Link href="/" title={t('common.homepage')}>
-            <Image src={Logo} alt="Logo" width={100} height={100} />
+            <Image src={Logo} alt="Logo" className="w-[100px]" />
           </Link>
           <LanguageSelector />
         </Container>

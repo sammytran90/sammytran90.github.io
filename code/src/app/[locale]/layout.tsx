@@ -37,8 +37,8 @@ interface LayoutProps {
 }
 
 export default async function PageLayout({ children, params }: LayoutProps) {
-  const { isEnabled: preview } = draftMode();
-  const { locale } = params;
+  const { isEnabled: preview } = await draftMode();
+  const { locale } = await params;
   const { resources } = await initTranslations({ locale });
 
   return (

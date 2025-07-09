@@ -127,7 +127,8 @@ export const LanguageSelectorDesktop = ({ localeName, onChange, displayName }) =
                       ? `/${availableLocale}${pathnameWithoutLocale}`
                       : `/${availableLocale}${pathname}`
                   }
-                  locale={availableLocale}
+                  // TODO: fix this prop is not supported in nextjs 15
+                  // locale={availableLocale}
                   onClick={event => {
                     onChange(event);
                     setIsOpen(false);

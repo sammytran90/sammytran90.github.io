@@ -11,13 +11,8 @@ import { twMerge } from 'tailwind-merge';
 import { ArticleAuthor } from '@src/components/features/article/ArticleAuthor';
 import { CtfImage } from '@src/components/features/contentful';
 import { FormatDate } from '@src/components/shared/format-date';
-import { PageBlogPostFieldsFragment } from '@src/lib/__generated/sdk';
 
-interface ArticleTileProps extends HTMLProps<HTMLDivElement> {
-  article: PageBlogPostFieldsFragment;
-}
-
-export const ArticleTile = ({ article, className }: ArticleTileProps) => {
+export const ArticleTile = ({ article, className }: any /*TODO: fix type*/) => {
   const { featuredImage, publishedDate, slug, title } = useContentfulLiveUpdates(article);
   const inspectorProps = useContentfulInspectorMode({ entryId: article.sys.id });
 

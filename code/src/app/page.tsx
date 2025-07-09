@@ -9,9 +9,9 @@ export default function Page() {
         </h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-          <Link href="/projects/dashboard" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <Link href="/showcase/dashboard" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
             <img 
-              src="/projects/dashboard.png" 
+              src="/showcase/dashboard.png" 
               alt="Project 1 Preview"
               className="w-full h-48 object-cover"
             />
@@ -21,9 +21,9 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/projects/customizable-product-viewer" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <Link href="/showcase/customizable-product-viewer" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
             <img 
-              src="/projects/customizable-product-viewer.gif"
+              src="/showcase/customizable-product-viewer.gif"
               alt="Customizable Product Viewer"
               className="w-full h-48 object-cover"
             />
@@ -33,9 +33,9 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/projects/showroom" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <Link href="/showcase/showroom" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
             <img 
-              src="/projects/showroom.png"
+              src="/showcase/showroom.png"
               alt="Project 3 Preview" 
               className="w-full h-48 object-cover"
             />

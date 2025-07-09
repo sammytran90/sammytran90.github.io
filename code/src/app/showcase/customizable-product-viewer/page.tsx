@@ -1,6 +1,6 @@
 import { VideoPlayer } from '@src/components/ui/video-player'
 export default function CustomizableProductViewer() {
-  const videoSrc = '/projects/customizable-product-viewer_video.mp4' // Placeholder - add your video file
+  const videoSrc = '/showcase/customizable-product-viewer_video.mp4' // Placeholder - add your video file
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">

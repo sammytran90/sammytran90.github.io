@@ -1,68 +1,55 @@
-import { dir } from 'i18next';
-import type { Metadata, Viewport } from 'next';
-import { Urbanist } from 'next/font/google';
-import { draftMode } from 'next/headers';
+import type { Metadata, Viewport } from "next";
+import { Urbanist } from "next/font/google";
 
-import { ContentfulPreviewProvider } from '@src/components/features/contentful';
-import TranslationsProvider from '@src/components/shared/i18n/TranslationProvider';
-import { Footer } from '@src/components/templates/footer';
-import { Header } from '@src/components/templates/header';
-import initTranslations from '@src/i18n';
-import { locales } from '@src/i18n/config';
+import { Footer } from "@src/components/templates/footer";
+import { Header } from "@src/components/templates/header";
 
 export function generateMetadata(): Metadata {
   return {
     metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
     },
   };
 }
 
 export const viewport: Viewport = {
-  themeColor: '#ffffff',
+  themeColor: "#ffffff",
 };
 
-export async function generateStaticParams(): Promise<LayoutProps['params'][]> {
-  return locales.map(locale => ({ locale }));
+export async function generateStaticParams(): Promise<LayoutProps[]> {
+  return [];
 }
 
-const urbanist = Urbanist({ subsets: ['latin'], variable: '--font-urbanist' });
+const urbanist = Urbanist({ subsets: ["latin"], variable: "--font-urbanist" });
 
-const allowedOriginList = ['https://app.contentful.com', 'https://app.eu.contentful.com'];
+const allowedOriginList = [
+  "https://app.contentful.com",
+  "https://app.eu.contentful.com",
+];
 
 interface LayoutProps {
   children: React.ReactNode;
-  params: { locale: string };
 }
 
-export default async function PageLayout({ children, params }: LayoutProps) {
-  const { isEnabled: preview } = await draftMode();
-  const { locale } = await params;
-  const { resources } = await initTranslations({ locale });
-
+export default async function PageLayout({ children }: LayoutProps) {
   return (
-    <html lang={locale} dir={dir(locale)}>
+    <html lang="en">
       <head>
-        <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+        <link
+          rel="mask-icon"
+          href="/favicons/safari-pinned-tab.svg"
+          color="#5bbad5"
+        />
       </head>
 
       <body>
-        <TranslationsProvider locale={locale} resources={resources}>
-          <ContentfulPreviewProvider
-            locale={locale}
-            enableInspectorMode={preview}
-            enableLiveUpdates={preview}
-            targetOrigin={allowedOriginList}
-          >
-            <main className={`${urbanist.variable} font-sans`}>
-              <Header locale={locale} />
-              {children}
-              <Footer />
-            </main>
-            <div id="portal" className={`${urbanist.variable} font-sans`} />
-          </ContentfulPreviewProvider>
-        </TranslationsProvider>
+        <main className={`${urbanist.variable} font-sans`}>
+          <Header />
+          {children}
+          <Footer />
+        </main>
+        <div id="portal" className={`${urbanist.variable} font-sans`} />
       </body>
     </html>
   );

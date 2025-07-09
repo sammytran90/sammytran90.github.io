@@ -1,22 +1,6 @@
 import type { Metadata } from 'next';
-import { draftMode } from 'next/headers';
-import { notFound } from 'next/navigation';
 
-import { ArticleTileGrid } from '@src/components/features/article';
-import { Container } from '@src/components/shared/container';
-import TranslationsProvider from '@src/components/shared/i18n/TranslationProvider';
-import initTranslations from '@src/i18n';
-import { defaultLocale, locales } from '@src/i18n/config';
-
-interface LandingPageProps {
-  params: {
-    locale: string;
-  };
-}
-
-export async function generateMetadata({ params }: LandingPageProps): Promise<Metadata> {
-  const { isEnabled: preview } = await draftMode();
-  // const gqlClient = preview ? previewClient : client;
+export async function generateMetadata(): Promise<Metadata> {
   const landingPageData = {
     pageLandingCollection: {
       items: [
@@ -33,13 +17,9 @@ export async function generateMetadata({ params }: LandingPageProps): Promise<Me
   };
   const page = landingPageData.pageLandingCollection?.items[0];
 
-  const languages = Object.fromEntries(
-    locales.map(locale => [locale, locale === defaultLocale ? '/' : `/${locale}`]),
-  );
   const metadata: Metadata = {
     alternates: {
       canonical: '/',
-      languages: languages,
     },
   };
   if (page?.seoFields) {
@@ -54,19 +34,14 @@ export async function generateMetadata({ params }: LandingPageProps): Promise<Me
   return metadata;
 }
 
-export default async function Page({ params }: LandingPageProps) {
-  const { locale } = await params;
-  const { isEnabled: preview } = await draftMode();
-  const { t, resources } = await initTranslations({ locale });
-  // const gqlClient = preview ? previewClient : client;
-
+export default async function Page() {
   return (
-    <TranslationsProvider locale={locale} resources={resources}>
-      <Container>
+    <>
+      <div>
         {/* <Link href={`/${page.featuredBlogPost.slug}`}>
           <ArticleHero article={page.featuredBlogPost} />
         </Link> */}
-      </Container>
+      </div>
 
       {/* Tutorial: contentful-and-the-starter-template.md */}
       {/* Uncomment the line below to make the Greeting field available to render */}
@@ -74,11 +49,16 @@ export default async function Page({ params }: LandingPageProps) {
       {/*  <div className="my-5 bg-colorTextLightest p-5 text-colorBlueLightest">{page.greeting}</div>*/}
       {/*</Container>*/}
 
-      <Container className="my-8  md:mb-10 lg:mb-16">
-        <h2 className="mb-4 md:mb-6">{t('landingPage.latestArticles')}</h2>
-        <p>Hello</p>
+      <div className="my-8  md:mb-10 lg:mb-16">
+        <h2 className="mb-4 md:mb-6">Latest Articles</h2>
+        <div className="flex flex-col gap-4 w-[300px] h-[300px] bg-gray-200">
+          <div className="flex flex-col gap-2">
+            <h3 className="text-2xl font-bold">Hello</h3>
+            <p className="text-sm text-gray-500">Hello</p>
+          </div>
+        </div>
         {/* <ArticleTileGrid className="md:grid-cols-2 lg:grid-cols-3" articles={posts} /> */}
-      </Container>
-    </TranslationsProvider>
+      </div>
+    </>
   );
 }

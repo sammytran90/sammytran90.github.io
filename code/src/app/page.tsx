@@ -21,27 +21,27 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/projects/task-management" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <Link href="/projects/static-product-viewer" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
             <img 
-              src="/demo/preview2.jpg"
+              src="/projects/customizable-product-viewer.gif"
               alt="Project 2 Preview"
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-900">Task Management</h3>
-              <p className="text-sm text-gray-600">Efficient workflow organization tool</p>
+              <h3 className="text-lg font-semibold text-gray-900">Customizable Product Viewer</h3>
+              <p className="text-sm text-gray-600">Customizable product viewer for products with 360 degree view</p>
             </div>
           </Link>
 
-          <Link href="/projects/analytics" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <Link href="/projects/showroom" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
             <img 
-              src="/demo/preview3.jpg"
+              src="/projects/showroom.png"
               alt="Project 3 Preview" 
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-900">Analytics Dashboard</h3>
-              <p className="text-sm text-gray-600">Data visualization and insights</p>
+              <h3 className="text-lg font-semibold text-gray-900">Virtual Workspace</h3>
+              <p className="text-sm text-gray-600">Virtual workspace for customers to view products in 360 degree view</p>
             </div>
           </Link>
         </div>

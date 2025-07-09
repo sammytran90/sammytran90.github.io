@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .footer-scroll-animation::after {
+    content: "";
+    height: 1em;
+    width: 100%;
+    background: rgba(254, 178, 16, 1);
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    animation: progress-expand;
+    animation-timeline: scroll();
+  }
+
+  @keyframes progress-expand {
+    from { width: 0% }
+    to { width: 100% }
+  }
+}

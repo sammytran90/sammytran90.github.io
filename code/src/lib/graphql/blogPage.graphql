@@ -1,0 +1,19 @@
+fragment BlogPageFields on BlogPage {
+  __typename
+  sys {
+    id
+    spaceId
+  }
+  title
+  body {
+    json
+  }
+}
+
+query blogPage($locale: String, $preview: Boolean) {
+  blogPageCollection(limit: 1, locale: $locale, preview: $preview) {
+    items {
+      ...BlogPageFields
+    }
+  }
+}

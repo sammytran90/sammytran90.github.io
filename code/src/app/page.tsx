@@ -21,10 +21,10 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/projects/static-product-viewer" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <Link href="/projects/customizable-product-viewer" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
             <img 
               src="/projects/customizable-product-viewer.gif"
-              alt="Project 2 Preview"
+              alt="Customizable Product Viewer"
               className="w-full h-48 object-cover"
             />
             <div className="p-4">

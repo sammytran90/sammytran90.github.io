@@ -56,7 +56,7 @@ export default async function PageLayout({ children, params }: LayoutProps) {
             targetOrigin={allowedOriginList}
           >
             <main className={`${urbanist.variable} font-sans`}>
-              <Header />
+              <Header locale={locale} />
               {children}
               <Footer />
             </main>

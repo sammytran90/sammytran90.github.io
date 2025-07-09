@@ -60,22 +60,6 @@ export default async function Page({ params }: LandingPageProps) {
   const { t, resources } = await initTranslations({ locale });
   // const gqlClient = preview ? previewClient : client;
 
-  console.log('locale', locale);
-  console.log('preview', preview);
-  // const blogPageData = await gqlClient.blogPage({ locale, preview });
-  // const page = blogPageData.blogPageCollection?.items[0];
-
-  // if (!page) {
-  //   notFound();
-  // }
-
-  // const blogPostsData = blogPageData.blogPageCollection?.items;
-  // const posts = blogPostsData;
-
-  // if (!posts) {
-  //   return;
-  // }
-
   return (
     <TranslationsProvider locale={locale} resources={resources}>
       <Container>

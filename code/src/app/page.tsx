@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Page() {
   return (
     <div className="px-4 py-8 mx-auto bg-white">
@@ -5,6 +7,44 @@ export default function Page() {
         <h1 className="text-4xl font-bold my-6 text-center">
             Hi, see my works below
         </h1>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <Link href="/projects/dashboard" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+            <img 
+              src="/projects/dashboard.png" 
+              alt="Project 1 Preview"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-semibold text-gray-900">E-Commerce Platform</h3>
+              <p className="text-sm text-gray-600">Modern shopping experience with React</p>
+            </div>
+          </Link>
+
+          <Link href="/projects/task-management" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+            <img 
+              src="/demo/preview2.jpg"
+              alt="Project 2 Preview"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-semibold text-gray-900">Task Management</h3>
+              <p className="text-sm text-gray-600">Efficient workflow organization tool</p>
+            </div>
+          </Link>
+
+          <Link href="/projects/analytics" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+            <img 
+              src="/demo/preview3.jpg"
+              alt="Project 3 Preview" 
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-semibold text-gray-900">Analytics Dashboard</h3>
+              <p className="text-sm text-gray-600">Data visualization and insights</p>
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -33,9 +33,9 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/showcase/showroom" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <Link href="/showcase/virtual-showroom" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
             <img 
-              src="/showcase/showroom.png"
+              src="/showcase/virtual_lab.gif"
               alt="Project 3 Preview" 
               className="w-full h-48 object-cover"
             />

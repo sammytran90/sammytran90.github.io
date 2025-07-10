@@ -22,7 +22,7 @@ export function VideoPlayer({
   autoHideControls = true,
   onPlay,
   onPause,
-  onEnded
+  onEnded,
 }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
@@ -30,13 +30,15 @@ export function VideoPlayer({
   const [volume, setVolume] = useState(1)
   const [isMuted, setIsMuted] = useState(false)
   const [showControls, setShowControls] = useState(initialShowControls)
-  const [isFullscreen, setIsFullscreen] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_isFullscreen, setIsFullscreen] = useState(false)
   
   const videoRef = useRef<HTMLVideoElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const controlsTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined)
 
   useEffect(() => {
+    console.log('useEffect');
     const video = videoRef.current
     if (!video) return
 
@@ -66,6 +68,7 @@ export function VideoPlayer({
   }, [onEnded])
 
   const togglePlay = () => {
+    console.log('togglePlay')
     const video = videoRef.current
     if (!video) return
 
@@ -80,6 +83,7 @@ export function VideoPlayer({
   }
 
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('handleSeek');
     const video = videoRef.current
     if (!video) return
 
@@ -89,6 +93,7 @@ export function VideoPlayer({
   }
 
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('handleVolumeChange');
     const video = videoRef.current
     if (!video) return
 
@@ -99,6 +104,7 @@ export function VideoPlayer({
   }
 
   const toggleMute = () => {
+    console.log('toggleMute');
     const video = videoRef.current
     if (!video) return
 
@@ -112,6 +118,7 @@ export function VideoPlayer({
   }
 
   const toggleFullscreen = () => {
+    console.log('toggleFullscreen');
     if (!document.fullscreenElement) {
       containerRef.current?.requestFullscreen()
       setIsFullscreen(true)
@@ -122,6 +129,7 @@ export function VideoPlayer({
   }
 
   const restart = () => {
+    console.log('restart');
     const video = videoRef.current
     if (!video) return
 
@@ -135,6 +143,7 @@ export function VideoPlayer({
   }
 
   const formatTime = (time: number) => {
+    console.log('formatTime');
     const minutes = Math.floor(time / 60)
     const seconds = Math.floor(time % 60)
     return `${minutes}:${seconds.toString().padStart(2, '0')}`
@@ -172,17 +181,17 @@ export function VideoPlayer({
       {/* Video Element */}
       <video
         ref={videoRef}
+        src={src}
+        autoPlay
         className="w-full h-auto"
         poster={poster}
         onClick={togglePlay}
-      >
-        <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      />
+    
 
       {/* Overlay Controls */}
       <div id="video-player-overlay"
-        className={`absolute inset-0 bg-[rgba(0,0,0,0.5)] bg-opacity-0 transition-opacity duration-300 ${
+        className={`hidden absolute inset-0 bg-[rgba(0,0,0,0.5)] bg-opacity-0 transition-opacity duration-300 ${
           showControls ? 'opacity-100' : 'opacity-0'
         }`}
       >

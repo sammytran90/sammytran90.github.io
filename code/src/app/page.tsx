@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -8,7 +8,7 @@ export default function Page() {
           Hi, glad to see you here
         </h1>
         <div className="relative w-[200px] h-[200px] rounded-[50%] overflow-hidden">
-          <img
+          <Image
             className="w-[400px] aspect-square object-contain absolute scale-[3.5]"
             width={200}
             height={200}

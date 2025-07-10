@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -10,7 +11,7 @@ export default function Page() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           <Link href="/showcase/dashboard" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-            <img 
+            <Image 
               src="/showcase/dashboard.png" 
               alt="Project 1 Preview"
               className="w-full h-48 object-cover"
@@ -22,7 +23,7 @@ export default function Page() {
           </Link>
 
           <Link href="/showcase/customizable-product-viewer" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-            <img 
+            <Image 
               src="/showcase/customizable-product-viewer.gif"
               alt="Customizable Product Viewer"
               className="w-full h-48 object-cover"
@@ -34,7 +35,7 @@ export default function Page() {
           </Link>
 
           <Link href="/showcase/virtual-showroom" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-            <img 
+            <Image 
               src="/showcase/virtual_lab.gif"
               alt="Project 3 Preview" 
               className="w-full h-48 object-cover"

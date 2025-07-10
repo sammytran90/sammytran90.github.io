@@ -16,8 +16,8 @@ export default function Page() {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-900">E-Commerce Platform</h3>
-              <p className="text-sm text-gray-600">Modern shopping experience with React</p>
+              <h3 className="text-lg font-semibold text-gray-900">Elegant Dashboard</h3>
+              <p className="text-sm text-gray-600">Clear dashboard with business insights</p>
             </div>
           </Link>
 

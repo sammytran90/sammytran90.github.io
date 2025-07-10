@@ -1,15 +1,22 @@
+import Link from "next/link";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="flex min-h-screen items-center justify-center p-8">
-      <main className="flex flex-col items-center gap-8 text-center">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-6xl font-[family-name:var(--font-roboto)]">
-          Coming Soon
+    <div className="px-4 py-8 mx-auto bg-white">
+      <div className="max-w-screen-md mt-10 mx-auto flex flex-col items-center justify-center">
+        <h1 className="text-4xl font-bold my-6 text-center">
+          Hi, glad to see you here
         </h1>
-        <p className="text-lg text-foreground/80 font-[family-name:var(--font-roboto-mono)]">
-          Something exciting is in the works. Stay tuned!
-        </p>
-      </main>
+        <div className="relative w-[200px] h-[200px] rounded-[50%] overflow-hidden">
+          <img
+            className="w-[400px] aspect-square object-contain absolute scale-[3.5]"
+            width={200}
+            height={200}
+            src="/profile.jpg"
+            alt="Profile Picture"
+          />
+        </div>
+      </div>
     </div>
   );
 }

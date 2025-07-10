@@ -40,7 +40,7 @@ export const Header = () => {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex md:items-center md:space-x-6">
-            <Link href="/get-in-touch" className="text-gray-800 hover:text-blue-600 transition duration-300">Get in touch</Link>
+            <Link href="/get-in-touch" className="text-[#fce8c5] transition duration-300 font-bold underline">Get in touch</Link>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ export const Header = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
-              <Link href="/get-in-touch" className="text-gray-800 hover:text-blue-600 transition duration-300">Get in touch</Link>
+              <Link href="/get-in-touch" className="text-[#fce8c5] transition duration-300 font-bold underline">Get in touch</Link>
             </div>
           </div>
         )}

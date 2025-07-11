@@ -6,6 +6,8 @@ import { Badge } from "@src/components/ui/badge";
 import { Button } from "@src/components/ui/button";
 import { Avatar, AvatarFallback } from "@src/components/ui/avatar";
 
+type TTab = "overview" | "users" | "lyrics" | "songs" | "payments";
+
 interface User {
   id: string;
   name: string;
@@ -41,7 +43,7 @@ interface Song {
 }
 
 export default function MusicAdminDashboard() {
-  const [activeTab, setActiveTab] = useState<"overview" | "users" | "lyrics" | "songs" | "payments">("overview");
+  const [activeTab, setActiveTab] = useState<TTab>("overview");
   const [currentLanguage, setCurrentLanguage] = useState<"en" | "el">("en");
 
   // Mock data
@@ -181,7 +183,7 @@ export default function MusicAdminDashboard() {
             {["overview", "users", "lyrics", "songs", "payments"].map((tab) => (
               <button
                 key={tab}
-                onClick={() => setActiveTab(tab as any)}
+                onClick={() => setActiveTab(tab as TTab)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm ${
                   activeTab === tab
                     ? "border-blue-500 text-blue-600"

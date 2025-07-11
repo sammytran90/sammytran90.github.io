@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@src/components/ui/card";
 import { Badge } from "@src/components/ui/badge";
 import { Button } from "@src/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@src/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@src/components/ui/avatar";
 
 interface User {
   id: string;

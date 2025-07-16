@@ -52,6 +52,20 @@ export default function Page() {
             </div>
           </Link>
 
+          <Link href="/showcase/threejs-animation" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+            <Image 
+              src="/showcase/threejs-animation-trigger.gif"
+              alt="Three.js Animation" 
+              className="w-full h-48 object-cover"
+              width={400}
+              height={192}
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-semibold text-gray-900">Three.js Animation</h3>
+              <p className="text-sm text-gray-600">Three.js animation for products</p>
+            </div>
+          </Link>
+
           <Link href="/showcase/music-admin" className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
             <div className="w-full h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
               <div className="text-center text-white">
